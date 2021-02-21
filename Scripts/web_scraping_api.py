@@ -1,3 +1,3 @@
-"""
-Código para decargar los datos automaticamente
-"""
+import requests
+import webbrowser
+import bs4
