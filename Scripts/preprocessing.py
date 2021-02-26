@@ -5,7 +5,10 @@ from shareplum.site import Version
 from shareplum import Office365
 
 # SharePoint
-authcookie = Office365('https://eafit.sharepoint.com', username='NUESTRO USUARIO', password='NUESTRA CONTRASEÑA').GetCookies()
+user_name = '@eafit.edu.co'
+password = ''
+
+authcookie = Office365('https://eafit.sharepoint.com', username=user_name, password=password).GetCookies()
 site = Site('https://eafit.sharepoint.com/sites/Proyectoinformedecoyunturaeconomica/', version=Version.v2016, authcookie=authcookie)
 
 folder = site.Folder('Documentos Compartidos/General')
