@@ -33,7 +33,29 @@ nombre_actual_archivo
 # Organizing files
 
 # Preprocessing: Production
+
+
 # Preprocessing: Prices
+
+
+#eliminar columnas sin encabezado
+df.drop(df.filter(regex="Unname"),axis=1, inplace=True)
+
+
+#eliminar una columna en especifico
+del df['Expectativas']
+
+"""
+seleccionar solo los datos necesarios
+se borran las últimas n filas 
+k es la nueva fila que se agregó de información (ej, ya no es hasta dic 2020, sino que se agregó enero 2021)
+"""
+
+k=1
+n=28-k
+
+df.drop(df.tail(n).index, 
+        inplace = True) 
 # Preprocessing: Labor
 # Preprocessing: External sector
 # Preprocessing: Fiscal
